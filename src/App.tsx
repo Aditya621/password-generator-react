@@ -7,7 +7,7 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false);
   const [password, setPassword] = useState('');
 
-  const passwordRef = useRef(null);
+  const passwordRef:any = useRef(null);
 
   const passwordGenrator = useCallback(() => {
     let pass = '';
@@ -58,7 +58,7 @@ function App() {
             min={6}
             max={100}
             value={length}
-            onChange={(e) => setLength(e.target.value)}
+            onChange={(e) => setLength(Number(e.target.value))}
           />
           <label htmlFor="label">length: {length}</label>
 
